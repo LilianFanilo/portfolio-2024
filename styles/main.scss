@@ -2,16 +2,131 @@ main {
   display: grid;
   width: 100%;
   height: 100vh;
-  background-color: red;
+  // background-color: red;
   grid-template-columns: repeat(10, 1fr);
   column-gap: 20px;
   padding: 0 50px;
 
   .main-sidebar {
     grid-column: 1 / 4;
+    padding-top: 60px;
+
+    h1 {
+      font-size: 48px;
+      font-weight: 400;
+
+      span {
+        font-size: 24px;
+        font-weight: 300;
+      }
+    }
+
+    li {
+      list-style: none;
+
+      a {
+        all: unset;
+        display: block;
+        font-size: 16px;
+        font-style: italic;
+        font-weight: 700;
+        width: fit-content;
+        cursor: pointer;
+        transition: ease 0.5s;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 0%;
+          height: 1px;
+          transition: ease 0.5s;
+        }
+
+        &:hover {
+          transform: translateX(20px);
+          &::after {
+            width: 100%;
+            border: 1px solid black;
+          }
+        }
+      }
+    }
   }
 
   .main-content {
-    grid-column: 5 / 11;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    grid-column: 4 / 11;
+    overflow: scroll;
+    padding-top: 80px;
+    margin-right: -50px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .content-container {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      column-gap: 20px;
+
+      h2 {
+        font-size: 32px;
+        font-style: italic;
+        font-weight: 400;
+        grid-column: 2 / 5;
+        margin-bottom: 15px;
+      }
+
+      .skills-lists-container {
+        display: grid;
+        grid-column: 2 / 8;
+        grid-template-columns: repeat(6, 1fr);
+        column-gap: 20px;
+        padding-right: 50px;
+
+        h3 {
+          position: relative;
+          font-size: 24px;
+          font-weight: 300;
+          margin-bottom: 23px;
+
+          &::after {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            bottom: -8px;
+            background-color: black;
+          }
+        }
+
+        li {
+          margin-left: 25px;
+          font-size: 20px;
+          font-weight: 200;
+        }
+
+        .dev-skill-list {
+          grid-column: 1/3;
+        }
+        .design-skill-list {
+          grid-column: 3/5;
+        }
+        .office-skill-list {
+          grid-column: 5/7;
+        }
+      }
+
+      p {
+        font-size: 20px;
+        font-weight: 200;
+        text-align: justify;
+        grid-column: 2 / 7;
+        margin-bottom: 30px;
+      }
+    }
   }
 }
