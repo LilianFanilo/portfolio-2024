@@ -13,7 +13,9 @@ main {
 
     h1 {
       font-size: 48px;
+      line-height: 0.6;
       font-weight: 400;
+      margin-bottom: 60px;
 
       span {
         font-size: 24px;
@@ -21,32 +23,49 @@ main {
       }
     }
 
-    li {
-      list-style: none;
+    .menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 75%;
+    }
 
-      a {
-        all: unset;
-        display: block;
-        font-size: 16px;
-        font-style: italic;
-        font-weight: 700;
+    ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: 5px;
+
+      li {
+        list-style: none;
         width: fit-content;
-        cursor: pointer;
-        transition: ease 0.5s;
 
-        &::after {
-          content: "";
+        a {
+          all: unset;
           display: block;
-          width: 0%;
-          height: 1px;
+          position: relative;
+          font-size: 16px;
+          font-style: italic;
+          font-weight: 700;
+          width: fit-content;
+          cursor: pointer;
           transition: ease 0.5s;
-        }
 
-        &:hover {
-          transform: translateX(20px);
           &::after {
-            width: 100%;
-            border: 1px solid black;
+            content: "";
+            display: block;
+            position: absolute;
+            width: 0%;
+            height: 1px;
+            transition: ease 0.5s;
+          }
+        }
+        &:hover {
+          a {
+            transform: translateX(20px);
+            &::after {
+              width: 100%;
+              border: 1px solid black;
+            }
           }
         }
       }

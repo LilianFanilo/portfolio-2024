@@ -75,9 +75,24 @@
       padding-right: 200px;
 
       .project-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
         width: 252px;
         height: 252px;
         border: 1px solid black;
+        padding: 9px 16px;
+        opacity: 0;
+
+        h3 {
+          font-size: 20px;
+          font-weight: 400;
+        }
+
+        span {
+          font-size: 20px;
+          font-weight: 200;
+        }
       }
     }
   }
