@@ -39,7 +39,8 @@ main {
         list-style: none;
         width: fit-content;
 
-        a {
+        a,
+        button {
           all: unset;
           display: block;
           position: relative;
@@ -60,7 +61,8 @@ main {
           }
         }
         &:hover {
-          a {
+          a,
+          button {
             transform: translateX(20px);
             &::after {
               width: 100%;
@@ -78,7 +80,7 @@ main {
     row-gap: 50px;
     grid-column: 4 / 11;
     overflow: scroll;
-    padding-top: 80px;
+    // padding-top: 80px;
     margin-right: -50px;
 
     &::-webkit-scrollbar {
@@ -89,6 +91,11 @@ main {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
       column-gap: 20px;
+      padding-top: 40px;
+
+      &:nth-child(1) {
+        padding-top: 80px;
+      }
 
       h2 {
         font-size: 32px;

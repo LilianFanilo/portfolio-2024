@@ -1,0 +1,16 @@
+progress {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 10px;
+  border: 1px solid black;
+
+  &::-webkit-progress-bar {
+    background: transparent;
+  }
+
+  &::-webkit-progress-value {
+    background-color: black;
+    border: 1px solid white;
+    // background-attachment: fixed;
+  }
+}

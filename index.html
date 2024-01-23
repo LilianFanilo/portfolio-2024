@@ -17,10 +17,13 @@
         <div class="menu">
           <nav>
             <ul>
-              <li><a href="">Qui suis-je ?</a></li>
-              <li><a href="">Formations</a></li>
-              <li><a href="">Expériences & Projets</a></li>
+              <li><button id="section1Btn">Qui suis-je ?</button></li>
+              <li><button id="section2Btn">Formations</button></li>
+              <li>
+                <button id="section3Btn">Expériences & Projets</button>
+              </li>
             </ul>
+            <progress max="100" value="0"></progress>
           </nav>
           <footer>
             <ul>
@@ -32,8 +35,8 @@
         </div>
       </section>
       <section class="main-content">
-        <div class="content-container">
-          <h2>Qui suis-je ?</h2>
+        <div class="content-container" id="section1">
+          <h2 data-splitting>Qui suis-je ?</h2>
           <p>
             20 ans - À la recherche d’un contrat d’alternance pour 2023-2024.
             Mon stage de développeur web chez Peexeo m’a permis de renforcer mes
@@ -68,10 +71,9 @@
               <li>Notion</li>
             </ul>
           </div>
-          <div class="box"></div>
         </div>
-        <div class="content-container">
-          <h2>Formations</h2>
+        <div class="content-container" id="section2">
+          <h2 data-splitting>Formations</h2>
           <p>
             2021 > 2024: <br />
             3ème année de BUT MMI (Métiers du Multimédia et de l’Internet) à
@@ -88,8 +90,8 @@
             mention Bien, Lycée Jean Renoir Bondy.
           </p>
         </div>
-        <div class="content-container" id="projects">
-          <h2>Expériences & Projets</h2>
+        <div class="content-container" id="section3">
+          <h2 data-splitting>Expériences & Projets</h2>
           <section class="project-list-container dev-projects">
             <div class="project-list">
               <ul></ul>
@@ -110,6 +112,7 @@
     </main>
     <script type="module" src="/main.js"></script>
     <script type="module" src="/js/projects-lists.js"></script>
+    <script type="module" src="/js/splitting.js"></script>
     <script type="module" src="/js/gsap-animations.js"></script>
   </body>
 </html>
