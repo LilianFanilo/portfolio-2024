@@ -35,6 +35,10 @@ main {
       flex-direction: column;
       row-gap: 5px;
 
+      &.language-list {
+        flex-direction: row;
+      }
+
       li {
         list-style: none;
         width: fit-content;

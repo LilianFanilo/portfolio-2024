@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./style.scss" />
   </head>
   <body>
+    <div id="preloader"></div>
     <main>
       <section class="main-sidebar">
         <h1>
@@ -27,9 +28,25 @@
           </nav>
           <footer>
             <ul>
-              <li><a href="">Email</a></li>
-              <li><a href="">LinkedIn</a></li>
-              <li><a href="">Github</a></li>
+              <li><a href="" target="_blank">Email</a></li>
+              <li><a href="" target="_blank">LinkedIn</a></li>
+              <li><a href="" target="_blank">Github</a></li>
+            </ul>
+            <ul class="language-list">
+              <li>
+                <a href="index.html" onclick="changeLanguage('fr')">FR</a>
+              </li>
+              <li>
+                <a href="index.html" onclick="changeLanguage('en')">EN</a>
+              </li>
+            </ul>
+            <ul class="language-list">
+              <li>
+                <a href="index.html" onclick="changeLanguage('fr')">Light</a>
+              </li>
+              <li>
+                <a href="index.html" onclick="changeLanguage('en')">Dark</a>
+              </li>
             </ul>
           </footer>
         </div>
@@ -114,5 +131,6 @@
     <script type="module" src="/js/projects-lists.js"></script>
     <script type="module" src="/js/splitting.js"></script>
     <script type="module" src="/js/gsap-animations.js"></script>
+    <script src="/js/preloader.js"></script>
   </body>
 </html>
